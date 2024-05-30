@@ -1,0 +1,59 @@
+﻿@model IEnumerable<SDP224A1.Models.ConcertBaseViewModel>
+
+@{
+    ViewBag.Title = "Upcoming Concerts";
+}
+
+<h2>Upcoming Concerts</h2>
+
+<p>
+    <button type="button" class="btn btn-primary">@Html.ActionLink("Register New Concert", "Create", null, new { @class = "text-white text-decoration-none" })</button>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Contact Info
+        </th>
+        <th>
+            Concert Date
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name) <br />
+            <i>@Html.DisplayFor(modelItem => item.Company)</i>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)<br />
+            @Html.DisplayFor(modelItem => item.City) @Html.DisplayFor(modelItem => item.State)<br />
+            @Html.DisplayFor(modelItem => item.Country) @Html.DisplayFor(modelItem => item.PostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)<br />
+            @Html.DisplayFor(modelItem => item.Email)<br />
+            @Html.DisplayFor(modelItem => item.Website)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConcertDate))<br />
+            @Html.DisplayFor(modelItem => item.DaysToGo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ConcertId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ConcertId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ConcertId })
+        </td>
+    </tr>
+}
+
+</table>
