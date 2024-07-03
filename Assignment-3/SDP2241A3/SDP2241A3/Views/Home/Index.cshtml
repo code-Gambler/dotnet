@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="appTitle">
+        <h1 id="appTitle">Assignment 3 - Steven David Pillay</h1>
+        <p class="lead">Entity Management, UI Customization, and Handling Many-to-Many Relationships</p>
+    </section>
+
+    <div class="row mt-5">
+        <section class="col-md-6" aria-labelledby="whatILearned">
+            <h2 id="whatILearned">I learned ...</h2>
+            <p>During this assignment, I learned how to implement a full-stack web application using ASP.NET, focusing on creating, retrieving, updating, and managing various entities such as Albums, MediaTypes, Tracks, and Playlists. I gained experience in following best practices for web development, such as keeping the user interface clean and intuitive, managing NuGet packages for external libraries, and writing efficient LINQ queries to handle data sorting and retrieval. Additionally, I learned how to effectively use view models and AutoMapper to streamline the process of mapping data between the database and the application’s UI. The assignment also reinforced my understanding of working with many-to-many relationships, particularly in the context of editing Playlists.</p>
+        </section>
+        <section class="col-md-6" aria-labelledby="whatIStruggledWith">
+            <h2 id="whatIStruggledWith">I struggled with ...</h2>
+            <p>I struggled with managing the many-to-many relationships when editing Playlists, especially ensuring that the UI correctly reflected the current state of the Playlist and its associated Tracks. Configuring the select lists and handling the submission of multiple selected items required careful attention to detail and debugging. Additionally, customizing the appearance of the web app to meet the requirements while maintaining a clean and user-friendly design presented some challenges, as it involved learning more about Bootstrap and CSS. Another challenge was ensuring data validation and handling error scenarios gracefully, which required thorough testing and debugging to prevent any runtime issues.</p>
+        </section>
+    </div>
+</main>
